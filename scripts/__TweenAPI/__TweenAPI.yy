@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__TweenAPI",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__TweenAPI",
+  "parent":{
+    "name":"Private",
+    "path":"folders/GM-Tween/Private.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

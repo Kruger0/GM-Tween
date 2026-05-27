@@ -1,0 +1,6 @@
+
+enum __TWEEN_TYPE {
+    VARIABLE,
+    INTERVAL,
+    CALLBACK,
+}
