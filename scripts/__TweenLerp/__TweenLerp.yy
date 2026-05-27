@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"__TweenUpdate",
+  "%Name":"__TweenLerp",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__TweenUpdate",
+  "name":"__TweenLerp",
   "parent":{
     "name":"Private",
     "path":"folders/GM-Tween/Private.yy",
