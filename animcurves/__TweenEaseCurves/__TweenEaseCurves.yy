@@ -1,35 +1,40 @@
 {
   "$GMAnimCurve":"",
-  "%Name":"__TweenDefaultCurves",
+  "%Name":"__TweenEaseCurves",
   "channels":[
     {"$GMAnimCurveChannel":"","%Name":"linear","colour":4290799884,"name":"linear","points":[
-        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
-        {"th0":0.0,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+        {"th0":0.0,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
     {"$GMAnimCurveChannel":"","%Name":"sineIn","colour":4281083598,"name":"sineIn","points":[
-        {"th0":-0.1,"th1":0.5,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
-        {"th0":-2.0954758E-09,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+        {"th0":0.0,"th1":0.5,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
     {"$GMAnimCurveChannel":"","%Name":"sineInOut","colour":4281083598,"name":"sineInOut","points":[
-        {"th0":-0.05,"th1":0.4,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
-        {"th0":-0.4,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+        {"th0":0.0,"th1":0.4,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.4,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
     {"$GMAnimCurveChannel":"","%Name":"sineOut","colour":4281083598,"name":"sineOut","points":[
-        {"th0":-0.1,"th1":2.0954758E-09,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
         {"th0":-0.5,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
+    {"$GMAnimCurveChannel":"","%Name":"sineOutIn","colour":4281083598,"name":"sineOutIn","points":[
+        {"th0":-0.25,"th1":0.1629954,"tv0":0.0,"tv1":0.2560325,"x":0.0,"y":0.0,},
+        {"th0":-0.1809712,"th1":0.1809712,"tv0":0.0,"tv1":0.0,"x":0.5,"y":0.5,},
+        {"th0":-0.1629954,"th1":0.25,"tv0":-0.2560325,"tv1":0.0,"x":1.0,"y":1.0,},
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
     {"$GMAnimCurveChannel":"","%Name":"cubicIn","colour":4279015665,"name":"cubicIn","points":[
         {"th0":-0.1,"th1":0.8,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
         {"th0":0.0,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
-      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
     {"$GMAnimCurveChannel":"","%Name":"cubicInOut","colour":4279015665,"name":"cubicInOut","points":[
-        {"th0":-0.05,"th1":0.625,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
-        {"th0":-0.625,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
-      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
+        {"th0":0.0,"th1":0.625,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.625,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
     {"$GMAnimCurveChannel":"","%Name":"cubicOut","colour":4279015665,"name":"cubicOut","points":[
         {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
         {"th0":-0.8,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
-      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
     {"$GMAnimCurveChannel":"","%Name":"quartIn","colour":4290799884,"name":"quartIn","points":[
         {"th0":-0.25,"th1":1.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
         {"th0":0.0,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
@@ -153,7 +158,7 @@
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":false,},
   ],
   "function":2,
-  "name":"__TweenDefaultCurves",
+  "name":"__TweenEaseCurves",
   "parent":{
     "name":"Private",
     "path":"folders/GM-Tween/Private.yy",

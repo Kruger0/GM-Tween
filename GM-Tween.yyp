@@ -23,7 +23,7 @@
   },
   "name":"GM-Tween",
   "resources":[
-    {"id":{"name":"__TweenDefaultCurves","path":"animcurves/__TweenDefaultCurves/__TweenDefaultCurves.yy",},},
+    {"id":{"name":"__TweenEaseCurves","path":"animcurves/__TweenEaseCurves/__TweenEaseCurves.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
