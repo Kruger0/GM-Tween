@@ -8,3 +8,8 @@ enum __TWEEN_TYPE {
     INTERVAL,
     CALLBACK,
 }
+
+enum TWEEN {
+    LINEAR,
+    
+}

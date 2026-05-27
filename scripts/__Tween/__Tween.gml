@@ -198,7 +198,13 @@ function Tween(source = undefined) constructor {
         return self;
     }
     static SetEase = function(animCurve, animChannel = 0) {
-        __ease = animcurve_get_channel(animCurve, animChannel);
+        var _curve = animCurve;
+        if (is_numeric(animCurve)) {
+            switch (animCurve) {
+                
+            }
+        }
+        __ease = animcurve_get_channel(_curve, animChannel);
         return self;
     }
     

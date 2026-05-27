@@ -19,7 +19,7 @@ if (mouse_check_button_pressed(mb_right)) {
     tween = new Tween(id);
     
     // Arrow
-    var _ease = __TweenEaseLinear;
+    var _ease = __TweenEaseOutCirc;
     
     var _duration = 0.8;
     var _dir = point_direction(room_width/2, room_height/2, mouse_x, mouse_y);
