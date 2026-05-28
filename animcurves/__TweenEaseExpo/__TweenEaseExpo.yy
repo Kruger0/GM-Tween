@@ -1,0 +1,35 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"__TweenEaseExpo",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"In","colour":4294561024,"name":"In","points":[
+        {"th0":-0.25,"th1":0.2,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.14165363,"th1":0.2544392,"tv0":-0.06746459,"tv1":0.12118036,"x":0.6575192,"y":0.06700492,},
+        {"th0":0.0,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"Out","colour":4279542527,"name":"Out","points":[
+        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.2544392,"th1":0.14165363,"tv0":-0.12118036,"tv1":0.06746459,"x":0.3424808,"y":0.9329951,},
+        {"th0":-0.2,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"InOut","colour":4294787035,"name":"InOut","points":[
+        {"th0":-0.125,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.070826806,"th1":0.2,"tv0":-0.03373229,"tv1":0.096,"x":0.3287596,"y":0.03350246,},
+        {"th0":-0.2,"th1":0.070826806,"tv0":-0.096,"tv1":0.03373231,"x":0.6712404,"y":0.96649754,},
+        {"th0":-0.1,"th1":0.125,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"OutIn","colour":4283417946,"name":"OutIn","points":[
+        {"th0":-0.125,"th1":0.0803704,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.44093534,"th1":0.43576956,"tv0":0.8960134,"tv1":-0.88551617,"x":0.5,"y":0.5,},
+        {"th0":-0.0803704,"th1":0.125,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"__TweenEaseExpo",
+  "parent":{
+    "name":"Curves",
+    "path":"folders/GM-Tween/Curves.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

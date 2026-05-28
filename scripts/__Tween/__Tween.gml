@@ -139,7 +139,6 @@ function Tween(source = undefined) constructor {
     }
     #endregion
     
-    /// @arg instance The instance or struct scope
     static Variable = function(instance, variable, target, duration) {
         var _step = new __TweenVariable();
         _step.__instance = instance;
@@ -198,12 +197,7 @@ function Tween(source = undefined) constructor {
         return self;
     }
     static SetEase = function(animCurve, animChannel = 0) {
-        var _curve = animCurve;
-        if (is_numeric(animCurve)) {
-            __ease = animcurve_get_channel(__TweenEaseCurves, animCurve);
-        } else {
-            __ease = animcurve_get_channel(_curve, animChannel);
-        }
+        __ease = animcurve_get_channel(animCurve, animChannel);
         return self;
     }
     

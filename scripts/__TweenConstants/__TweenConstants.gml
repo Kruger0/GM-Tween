@@ -9,58 +9,20 @@ enum __TWEEN_TYPE {
     CALLBACK,
 }
 
-enum TWEEN_EASE {
-    LINEAR,
-    
-    SINE_IN,
-    SINE_OUT,
-    SINE_IN_OUT,
-    SINE_OUT_IN,
+#macro TWEEN_CHANNEL_IN     "In"
+#macro TWEEN_CHANNEL_OUT    "Out"
+#macro TWEEN_CHANNEL_IN_OUT "InOut"
+#macro TWEEN_CHANNEL_OUT_IN "OutIn"
 
-    QUAD_IN,
-    QUAD_OUT,
-    QUAD_IN_OUT,
-    QUAD_OUT_IN,
-
-    CUBIC_IN,
-    CUBIC_OUT,
-    CUBIC_IN_OUT,
-    CUBIC_OUT_IN,
-    
-    QUART_IN,
-    QUART_OUT,
-    QUART_IN_OUT,
-    QUART_OUT_IN,
-
-    QUINT_IN,
-    QUINT_OUT,
-    QUINT_IN_OUT,
-    QUINT_OUT_IN,
-    
-    EXPO_IN,
-    EXPO_OUT,
-    EXPO_IN_OUT,
-    EXPO_OUT_IN,
-
-    CIRC_IN,
-    CIRC_OUT,
-    CIRC_IN_OUT,
-    CIRC_OUT_IN,
-
-    BACK_IN,
-    BACK_OUT,
-    BACK_IN_OUT,
-    BACK_OUT_IN,
-
-    ELASTIC_IN,
-    ELASTIC_OUT,
-    ELASTIC_IN_OUT,
-    ELASTIC_OUT_IN,
-    
-    BOUNCE_IN,
-    BOUNCE_OUT,
-    BOUNCE_IN_OUT,
-    BOUNCE_OUT_IN,
-
-    SPRING,
-}
+#macro TWEEN_EASE_LINEAR    __TweenEaseLinear
+#macro TWEEN_EASE_SINE      __TweenEaseSine
+#macro TWEEN_EASE_QUAD      __TweenEaseQuad
+#macro TWEEN_EASE_CUBIC     __TweenEaseCubic
+#macro TWEEN_EASE_QUART     __TweenEaseQuart
+#macro TWEEN_EASE_QUINT     __TweenEaseQuint
+#macro TWEEN_EASE_EXPO      __TweenEaseExpo
+#macro TWEEN_EASE_CIRC      __TweenEaseCirc
+#macro TWEEN_EASE_BACK      __TweenEaseBack
+#macro TWEEN_EASE_ELASTIC   __TweenEaseElastic
+#macro TWEEN_EASE_BOUNCE    __TweenEaseBounce
+#macro TWEEN_EASE_SPRING    __TweenEaseSpring

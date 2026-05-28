@@ -1,0 +1,31 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"__TweenEaseCubic",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"In","colour":4294561024,"name":"In","points":[
+        {"th0":-0.1,"th1":0.8,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":0.0,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"Out","colour":4279542527,"name":"Out","points":[
+        {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.8,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"InOut","colour":4294787035,"name":"InOut","points":[
+        {"th0":-0.05,"th1":0.625,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.625,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"OutIn","colour":4283417946,"name":"OutIn","points":[
+        {"th0":-0.125,"th1":0.0803704,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.44093534,"th1":0.43576956,"tv0":0.8960134,"tv1":-0.88551617,"x":0.5,"y":0.5,},
+        {"th0":-0.0803704,"th1":0.125,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"__TweenEaseCubic",
+  "parent":{
+    "name":"Curves",
+    "path":"folders/GM-Tween/Curves.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}
