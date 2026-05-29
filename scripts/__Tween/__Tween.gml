@@ -94,12 +94,12 @@ function Tween(source = undefined) constructor {
                 } break;
             
                 case __TWEEN_TYPE.CALLBACK: {
-                    script_execute_ext(__func, __args);
+                    method_call(__func, __args);
                     __done = true;
                 } break;
                 
                 case __TWEEN_TYPE.METHOD: {
-                    __func(_val);
+                    method_call(__func, [_val]);
                 } break;
             }
             if (__elapsed >= __duration) __done = true;
