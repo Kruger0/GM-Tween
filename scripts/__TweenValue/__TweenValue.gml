@@ -9,6 +9,7 @@ function __TweenValue() : __TweenStep() constructor {
     }
     static SetDelay = function(value) {
         __delay = value;
+        __remaining = value;
         return self;
     }
     static SetInterpolate = function(func) {
@@ -24,7 +25,7 @@ function __TweenValue() : __TweenStep() constructor {
         return self;
     }
     static FromCurrent = function() {
-        __from ??= variable_instance_get(__instance ?? -1, __variable) ?? 0;
+        __from ??= ((is_struct(__instance) || instance_exists(__instance ?? noone)) ? (__instance[$ __variable] ?? 0) : 0);
         return self;
     }
 }
@@ -49,7 +50,7 @@ function __TweenAngle() : __TweenValue() constructor {
 
 /// @ignore
 function __TweenString() : __TweenValue() constructor {
-    __type = __TWEEN_TYPE.ANGLE;
+    __type = __TWEEN_TYPE.STRING;
     __lerp = __TweenLerpString;
 }
 
