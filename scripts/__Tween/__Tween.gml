@@ -14,7 +14,9 @@ function Tween(source = undefined) constructor {
     __parallel = false;
     __dead = false;
     __elapsed = 0;
-    __events = array_create(__TWEEN_EVENT.LENGTH, false);
+    __onFinishedCb = [];
+    __onLoopFinishedCb = [];
+    __onStepFinishedCb = [];
     array_push(__data.tweens, self);
     
     static __Build = function(type, instance, variable, target, duration) {
@@ -34,9 +36,6 @@ function Tween(source = undefined) constructor {
         return step;
     }
     static __Update = function() {
-        for (var i = 0; i < __TWEEN_EVENT.LENGTH; i++) {
-            __events[i] = false;
-        }
         if (__dead) return;
         if (!is_undefined(__source) && !instance_exists(__source)) {
             __dead = true;
@@ -50,21 +49,30 @@ function Tween(source = undefined) constructor {
         var _slot = __steps[__current];
         var _dt = (__data.dt / game_get_speed(gamespeed_fps)) * __speed;
         __elapsed += _dt;
+        
         if (is_array(_slot)) {
             // Parallel
             var _done = true;
             for (var i = 0; i < array_length(_slot); i++) {
                 var _step = _slot[i];
                 if (!_step.__done) {
+                    var _wasDone = _step.__done;
                     __Execute(_step, _dt);
+                    if (!_wasDone && _step.__done) {
+                        __Trigger(__onStepFinishedCb);
+                    }
                     if (!_step.__done) _done = false;
                 }
             }
             if (_done) __Advance();
         } else {
             // Sequential
+            var _wasDone = _slot.__done;
             __Execute(_slot, _dt);
-            if (_slot.__done) __Advance();
+            if (!_wasDone && _slot.__done) {
+                __Trigger(__onStepFinishedCb);
+                __Advance();
+            }
         }
     }
     static __Execute = function(step, dt) {
@@ -109,12 +117,15 @@ function Tween(source = undefined) constructor {
         __current++;
         if (__current >= array_length(__steps)) {
             if (__loopsTotal == -1) {
+                __Trigger(__onLoopFinishedCb);
                 __Reset();
             } else {
                 __loopsLeft--;
                 if (__loopsLeft <= 0) {
                     __dead = true;
+                    __Trigger(__onFinishedCb);
                 } else {
+                    __Trigger(__onStepFinishedCb);
                     __Reset();
                 }
             }
@@ -145,6 +156,11 @@ function Tween(source = undefined) constructor {
             var _to = (__relative ? __from + __target : __target);
             __instance[$ __variable] = _to;
             __done = true;
+        }
+    }
+    static __Trigger = function(array) {
+        for (var i = 0; i < array_length(array); i++) {
+            method_call(array[i])
         }
     }
     #endregion
@@ -228,6 +244,19 @@ function Tween(source = undefined) constructor {
         return __paused;
     }
     
+    static OnFinished = function(callback) {
+        array_push(__onFinishedCb, callback);
+        return self;
+    }
+    static OnLoopFinished = function(callback) {
+        array_push(__onLoopFinishedCb, callback);
+        return self;
+    }
+    static OnStepFinished = function(callback) {
+        array_push(__onStepFinishedCb, callback);
+        return self;
+    }
+    
     static Skip = function() {
         while (__current < array_length(__steps)) {
             var _slot = __steps[__current];
@@ -254,15 +283,6 @@ function Tween(source = undefined) constructor {
         __paused = true;
         __Reset();
         return self;
-    }
-    static Finished = function() {
-        return __events[__TWEEN_EVENT.FINISHED];
-    }
-    static LoopFinished = function() {
-        return __events[__TWEEN_EVENT.LOOP_FINISHED];
-    }
-    static StepFinished = function() {
-        return __events[__TWEEN_EVENT.STEP_FINISHED];
     }
     static Destroy = function() {
         __paused = true;

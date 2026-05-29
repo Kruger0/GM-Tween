@@ -11,13 +11,6 @@ enum __TWEEN_TYPE {
     SUBTWEEN, // WIP
 }
 
-enum __TWEEN_EVENT {
-    FINISHED,
-    LOOP_FINISHED,
-    STEP_FINISHED,
-    LENGTH,
-}
-
 #macro TWEEN_CHANNEL_IN     "In"
 #macro TWEEN_CHANNEL_OUT    "Out"
 #macro TWEEN_CHANNEL_IN_OUT "InOut"
