@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__TweenGlobal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__TweenGlobal",
+  "parent":{
+    "name":"Core",
+    "path":"folders/GM-Tween/Core.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

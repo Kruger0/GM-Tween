@@ -6,9 +6,15 @@ function __TweenStep() constructor {
     __delay = 0;
     __type = undefined;
     __remaining = 0;
+    __variable = "";
+    __target = 0;
+    __lerp = __TweenLerpValue;
     __elapsed = 0;
     __duration = 0;
+    __ease = undefined;
+    __from = undefined;
     __instance = undefined;
+    __relative = false;
     __func = undefined;
 }
 

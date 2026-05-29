@@ -2,11 +2,6 @@
 /// @ignore
 function __TweenValue() : __TweenStep() constructor {
     __type = __TWEEN_TYPE.VALUE;
-    __variable = "";
-    __from = undefined;
-    __target = 0;
-    __ease = undefined;
-    __interpolate = lerp;
     
     static SetEase = function(animCurve, animChannel = 0) {
         __ease = animcurve_get_channel(animCurve, animChannel);
@@ -17,11 +12,11 @@ function __TweenValue() : __TweenStep() constructor {
         return self;
     }
     static SetInterpolate = function(func) {
-        __interpolate = method(self, func);
+        __lerp = method(self, func);
         return self;
     }
     static Relative = function() {
-        // to = from + target
+        __relative = true;
         return self;
     }
     static From = function(value) {
@@ -36,23 +31,29 @@ function __TweenValue() : __TweenStep() constructor {
 /// @ignore
 function __TweenVariable() : __TweenValue() constructor {
     __type = __TWEEN_TYPE.VARIABLE;
-    __interpolate = __TweenLerpValue;
+    __lerp = __TweenLerpValue;
 }
 
 /// @ignore
 function __TweenColor() : __TweenValue() constructor {
     __type = __TWEEN_TYPE.COLOR;
-    __interpolate = __TweenLerpColor;
+    __lerp = __TweenLerpColor;
 }
 
 /// @ignore
 function __TweenAngle() : __TweenValue() constructor {
     __type = __TWEEN_TYPE.ANGLE;
-    __interpolate = __TweenLerpAngle;
+    __lerp = __TweenLerpAngle;
+}
+
+/// @ignore
+function __TweenString() : __TweenValue() constructor {
+    __type = __TWEEN_TYPE.ANGLE;
+    __lerp = __TweenLerpString;
 }
 
 /// @ignore
 function __TweenMethod() : __TweenValue() constructor {
     __type = __TWEEN_TYPE.METHOD;
-    __interpolate = __TweenLerpValue;
+    __lerp = __TweenLerpValue;
 }

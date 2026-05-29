@@ -17,3 +17,8 @@ function __TweenLerpColor(val1, val2, amount) {
 function __TweenLerpAngle(val1, val2, amount) {
     return val1 + angle_difference(val2, val1) * amount;
 }
+
+/// @ignore
+function __TweenLerpString(val1, val2, amount) {
+    return val2; // TODO
+}

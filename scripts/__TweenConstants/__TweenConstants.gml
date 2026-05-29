@@ -4,9 +4,18 @@ enum __TWEEN_TYPE {
     VARIABLE,
     COLOR,
     ANGLE,
+    STRING,
     METHOD,
     INTERVAL,
     CALLBACK,
+    SUBTWEEN, // WIP
+}
+
+enum __TWEEN_EVENT {
+    FINISHED,
+    LOOP_FINISHED,
+    STEP_FINISHED,
+    LENGTH,
 }
 
 #macro TWEEN_CHANNEL_IN     "In"

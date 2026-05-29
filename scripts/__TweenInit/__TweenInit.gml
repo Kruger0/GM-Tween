@@ -5,6 +5,7 @@ function __TweenInit() {
         dt: 1,
         tweens: [],
         timeSource: undefined,
+        defaultEase: animcurve_get_channel(TWEEN_EASE_LINEAR, 0),
     }
     
     with (__data) {
