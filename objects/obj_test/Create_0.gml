@@ -34,6 +34,14 @@ points = {
             show_debug_message("finished")
         }
     },
+    func : function() {
+        show_debug_message("Hello!")
+    },
+    test : function(v) {
+        var _str1 = "Oh my God its Kotsume!"
+        var _str2 = "The quick brown fox jumps over the lazy dog"
+        show_debug_message(__TweenLerpString(_str1, _str2, v))
+    },
     increase : function() {
         if (t) t.Destroy();
         t = new Tween(); 
@@ -42,12 +50,13 @@ points = {
             t.Variable(self, "xscl", 0.8, 2).SetEase(TWEEN_EASE_QUART, TWEEN_CHANNEL_OUT);
             t.Variable(self, "yscl", 0.8, 2).SetEase(TWEEN_EASE_QUART, TWEEN_CHANNEL_OUT);
         t.ParallelEnd();
-        t.ParallelBegin();
-            t.Angle(self, "ang", 0, 2).From(10).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
-            t.Variable(self, "xscl", 1, 2).From(1.5).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
-            t.Variable(self, "yscl", 1, 2).From(1.5).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
-            t.Color(self, "c", c_white, 2).From(c_yellow).SetEase(TWEEN_EASE_EXPO, TWEEN_CHANNEL_OUT);
-        t.ParallelEnd();
+        //t.ParallelBegin();
+        //    t.Angle(self, "ang", 0, 2).From(10).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
+        //    t.Variable(self, "xscl", 1, 2).From(1.5).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
+        //    t.Variable(self, "yscl", 1, 2).From(1.5).SetEase(TWEEN_EASE_ELASTIC, TWEEN_CHANNEL_OUT);
+        //    t.Color(self, "c", c_white, 2).From(c_yellow).SetEase(TWEEN_EASE_EXPO, TWEEN_CHANNEL_OUT);
+        //t.ParallelEnd();
+        t.Callback(func);
     }
 }
 
