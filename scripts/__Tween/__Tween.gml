@@ -75,18 +75,18 @@ function Tween(source = undefined) constructor {
         }
         with (step) {
             var _ease = __ease ?? other.__ease ?? __data.defaultEase;
-            __from ??= variable_instance_get(__instance ?? -1, __variable) ?? 0;
+            __from ??= ((is_struct(__instance) || instance_exists(__instance ?? noone)) ? (__instance[$ __variable] ?? 0) : 0);
             __elapsed += dt;
             var _pos = clamp(__elapsed / __duration, 0, 1);
             var _to = (__relative ? __from + __target : __target);
-            var _t = animcurve_channel_evaluate(_ease, _pos);
-            var _val = __lerp(__from, _to, _t);
+            var _amt = animcurve_channel_evaluate(_ease, _pos);
+            var _result = __lerp(__from, _to, _amt);
             switch (__type) {
                 case __TWEEN_TYPE.VARIABLE:
                 case __TWEEN_TYPE.COLOR:
                 case __TWEEN_TYPE.ANGLE:
                 case __TWEEN_TYPE.STRING:{
-                    variable_instance_set(__instance, __variable, _val);
+                    __instance[$ __variable] = _result;
                 } break;
             
                 case __TWEEN_TYPE.INTERVAL: {
@@ -99,7 +99,7 @@ function Tween(source = undefined) constructor {
                 } break;
                 
                 case __TWEEN_TYPE.METHOD: {
-                    method_call(__func, [_val]);
+                    method_call(__func, [_result]);
                 } break;
             }
             if (__elapsed >= __duration) __done = true;
@@ -141,9 +141,9 @@ function Tween(source = undefined) constructor {
     }
     static __Skip = function(step) {
         with (step) {
-            __from ??= variable_instance_get(__instance ?? -1, __variable) ?? 0;
+            __from ??= ((is_struct(__instance) || instance_exists(__instance ?? noone)) ? (__instance[$ __variable] ?? 0) : 0);
             var _to = (__relative ? __from + __target : __target);
-            variable_instance_set(__instance, __variable, _to);
+            __instance[$ __variable] = _to;
             __done = true;
         }
     }
@@ -233,10 +233,10 @@ function Tween(source = undefined) constructor {
             var _slot = __steps[__current];
             if (is_array(_slot)) {
                 for (var i = 0; i < array_length(_slot); i++) {
-                    __CompleteStep(_slot[i]);
+                    __Skip(_slot[i]);
                 }
             } else {
-                __CompleteStep(_slot);
+                __Skip(_slot);
             }
             __current++;
         }
