@@ -24,6 +24,7 @@ function __TweenValue() : __TweenStep() constructor {
         return self;
     }
     static FromCurrent = function() {
+        __from ??= variable_instance_get(__instance ?? -1, __variable) ?? 0;
         return self;
     }
 }
