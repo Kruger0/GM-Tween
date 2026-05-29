@@ -8,7 +8,6 @@ enum __TWEEN_TYPE {
     METHOD,
     INTERVAL,
     CALLBACK,
-    SUBTWEEN, // WIP
 }
 
 #macro TWEEN_CHANNEL_IN     "In"
