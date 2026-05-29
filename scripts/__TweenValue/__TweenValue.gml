@@ -1,4 +1,4 @@
-
+// feather ignore all
 /// @ignore
 function __TweenValue() : __TweenStep() constructor {
     __type = __TWEEN_TYPE.VALUE;

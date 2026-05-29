@@ -1,4 +1,4 @@
-
+// feather ignore all
 function Tween(source = undefined) constructor {
     
     #region Private

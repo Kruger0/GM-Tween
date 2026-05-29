@@ -1,3 +1,5 @@
+// feather ignore all
+#macro __TWEEN_VERSION "1.0.0"
 
 enum __TWEEN_TYPE {
     VALUE,

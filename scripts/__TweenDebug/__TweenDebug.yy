@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"__Tween",
+  "%Name":"__TweenDebug",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__Tween",
+  "name":"__TweenDebug",
   "parent":{
     "name":"Scripts",
     "path":"folders/GM-Tween/Scripts.yy",

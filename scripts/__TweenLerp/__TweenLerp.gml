@@ -1,4 +1,4 @@
-
+// feather ignore all
 /// @ignore
 function __TweenLerpValue(val1, val2, amount) {
     //return val1 + (val2 - val1) * amount;

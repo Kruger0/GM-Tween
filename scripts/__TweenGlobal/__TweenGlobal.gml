@@ -1,3 +1,4 @@
+// feather ignore all
 
 function TweenSetDeltatime(dt) {
     static __data = __TweenInit();

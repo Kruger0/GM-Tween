@@ -1,4 +1,4 @@
-
+// feather ignore all
 /// @ignore
 function __TweenStep() constructor {
     __parallel = false;

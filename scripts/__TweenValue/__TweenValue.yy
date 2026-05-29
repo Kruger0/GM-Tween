@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__TweenValue",
   "parent":{
-    "name":"Core",
-    "path":"folders/GM-Tween/Core.yy",
+    "name":"Scripts",
+    "path":"folders/GM-Tween/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
