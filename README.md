@@ -1,6 +1,6 @@
 [![GitHub license](https://img.shields.io/github/license/Kruger0/GM-Tween)](https://github.com/Kruger0/GM-Tween/blob/main/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/Kruger0/GM-Tween)](https://github.com/Kruger0/GM-Tween/releases)
-[![GameMaker](https://img.shields.io/badge/GameMaker-2024.13+-blue?logo=gamemaker)](https://gamemaker.io/)
+[![GameMaker](https://img.shields.io/badge/GameMaker-LTS2026-blue?logo=gamemaker)](https://gamemaker.io/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Kruger0/GM-Tween)](https://github.com/Kruger0/GM-Tween/commits)
 <div align="center">
   <h1>GM-Tween 1.0.0</h1>
@@ -10,7 +10,7 @@ GM-Tween is a tweening engine made for GameMaker, featuring a fluent chainable A
 ## How to use!
 
 1. Create a tween instance and chain steps together:
-   ```cpp
+   ```js
    // Create a new tween
    tween = new Tween();
 
@@ -20,7 +20,7 @@ GM-Tween is a tweening engine made for GameMaker, featuring a fluent chainable A
    ```
 
 2. Use the fluent API to configure steps inline:
-   ```cpp
+   ```js
    // Chain multiple steps with easing
    tween.Variable(obj_player, "x", 300, 60)
            .SetEase(TWEEN_EASE_BOUNCE, TWEEN_CHANNEL_OUT)
@@ -30,7 +30,7 @@ GM-Tween is a tweening engine made for GameMaker, featuring a fluent chainable A
    ```
 
 3. Run steps in parallel for simultaneous animations:
-   ```cpp
+   ```js
    // Move X and Y at the same time
    tween.ParallelBegin()
            .Variable(obj_player, "x", 300, 60)
@@ -40,7 +40,7 @@ GM-Tween is a tweening engine made for GameMaker, featuring a fluent chainable A
    ```
 
 4. Set loops, callbacks, and control playback:
-   ```cpp
+   ```js
    tween.Variable(obj_player, "x", 300, 60)
         .Variable(obj_player, "x", 100, 60)
         .SetLoops(3)
@@ -59,7 +59,7 @@ GM-Tween is a tweening engine made for GameMaker, featuring a fluent chainable A
 
 ### Easing Curves
 12 easing curves are available via macros, each with In, Out, InOut, and OutIn channels:
-```cpp
+```js
 // Set easing on the whole tween
 tween.SetEase(TWEEN_EASE_BOUNCE, TWEEN_CHANNEL_OUT)
      .Variable(obj, "x", 500, 60)
@@ -75,7 +75,7 @@ Available curves: `TWEEN_EASE_LINEAR`, `TWEEN_EASE_SINE`, `TWEEN_EASE_QUAD`, `TW
 
 ### Color & Angle Interpolation
 Color and angle tweens handle their types automatically:
-```cpp
+```js
 // Fade a color
 tween.Color(obj, "colour", c_red, 60).Execute();
 
@@ -85,13 +85,13 @@ tween.Angle(obj, "image_angle", 720, 120).Execute();
 
 ### String Animation
 Animate strings by interpolating character ordinals:
-```cpp
+```js
 tween.String(obj, "caption", "HELLO WORLD", 60).Execute();
 ```
 
 ### Custom Method Tween
 Animate arbitrary values through a callback function:
-```cpp
+```js
 tween.Method(function(value) {
     audio_set_gain(snd_music, value, 0);
 }, 0, 1, 120)
@@ -101,7 +101,7 @@ tween.Method(function(value) {
 
 ### Relative Values
 Target values relative to the current value:
-```cpp
+```js
 tween.Variable(obj, "x", 200, 60)
         .Relative()
      .Execute();
@@ -109,7 +109,7 @@ tween.Variable(obj, "x", 200, 60)
 
 ### From Values
 Override the starting value of a step:
-```cpp
+```js
 tween.Variable(obj, "x", 500, 60)
         .From(0)
      .Execute();
@@ -117,7 +117,7 @@ tween.Variable(obj, "x", 500, 60)
 
 ### Delay & Interval
 Add delays between steps or wait without animation:
-```cpp
+```js
 tween.Variable(obj, "x", 300, 60)
      .Interval(30)             // Wait 30 frames
      .Variable(obj, "y", 400, 60)
@@ -129,7 +129,7 @@ tween.Variable(obj, "x", 300, 60)
 
 ### Looping
 Loop animations a finite number of times or infinitely:
-```cpp
+```js
 // Infinite loop
 tween.Variable(obj, "x", 500, 60)
      .Variable(obj, "x", 100, 60)
@@ -147,7 +147,7 @@ tween.OnLoopFinished(function() {
 
 ### Custom Interpolation
 Provide your own lerp function for a step:
-```cpp
+```js
 tween.Variable(obj, "x", 500, 60)
         .SetInterpolate(customLerp)
      .Execute();
@@ -155,7 +155,7 @@ tween.Variable(obj, "x", 500, 60)
 
 ### Global Control
 Manage all tweens at once:
-```cpp
+```js
 TweenPauseAll();
 TweenResumeAll();
 TweenStopAll();
@@ -168,7 +168,7 @@ var all = TweenGetAll();
 
 ### Deltatime
 Override the deltatime for frame-independent animation:
-```cpp
+```js
 TweenSetDeltatime(1.0);
 ```
 
